@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn --version'
-                 echo 'jenkins'
+                 echo 'jenkis'
             }
         }
     }
