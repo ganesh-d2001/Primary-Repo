@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'This is build phase from-'
-                echo 'github'
+                echo 'github-1'
             }
         }
         stage('Jira'){
