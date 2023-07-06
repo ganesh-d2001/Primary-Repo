@@ -15,8 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'this is deploy phasew'
-                jiraAssignIssue idOrKey: 'T2-27', site: 'https://uat12.atlassian.net/', userName: 'asha'
+                jiraAssignIssue idOrKey: 'T2-27',userName: 'asha'
             }
         }
     }
