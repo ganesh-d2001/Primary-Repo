@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                jiraAssignIssue idOrKey: 'T2-27',userName: 'asha'
+                jiraAssignIssue site: 'LOCAL',idOrKey: 'T2-27',userName: 'asha'
             }
         }
     }
