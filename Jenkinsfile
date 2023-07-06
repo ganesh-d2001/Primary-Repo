@@ -16,7 +16,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'linking to jira instance'
-                jiraAssignIssue idOrKey: 'T2-27', site: 'https://uat12.atlassian.net/', userName: 'asha'
+                jiraAssignIssue site: 'LOCAL', idOrKey: 'T2-27', userName: null
+
             }
         }
     }
