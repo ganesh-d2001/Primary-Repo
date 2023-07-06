@@ -19,7 +19,7 @@ pipeline {
             echo response.successful.toString()
             echo response.data.toString()
             }
-        }
+        
         stage('Test') {
             steps {
                 echo 'this is a test phase'
