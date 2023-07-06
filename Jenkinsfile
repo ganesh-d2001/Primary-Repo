@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Jira'){
             steps {
-                jiraAssignIssue site: 'uat12-site',idOrKey: 'T2-27',userName: '63d0ba64a05386069cdaa00d'
+                jiraAssignIssue site: 'uat12-site',idOrKey: 'T2-27',userName: '63d0ba64a05386069cdaa00d',accountId: '63d0ba64a05386069cdaa00d'
             }
         }
         stage('Test') {
