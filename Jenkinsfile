@@ -9,7 +9,17 @@ pipeline {
         }
         stage('Jira'){
             steps {
-                jiraAssignIssue site: 'uat12-site',idOrKey: 'T2-27',userName: '63d0ba64a05386069cdaa00d',accountId: '63d0ba64a05386069cdaa00d'
+                def testIssue = [fields: [ // id or key must present for project.
+                               project: [id: '10056'],
+                               summary: 'New JIRA Created from Jenkins.',
+                               description: 'New JIRA Created from Jenkins.',
+                               customfield_10140: 'Yes',
+                               // id or name must present for issueType.
+                               issuetype: [id: 'T2']]]
+
+                response = jiraNewIssue issue: testIssue
+                echo response.successful.toString()
+                echo response.data.toString()
             }
         }
         stage('Test') {
