@@ -16,6 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'this is deploy phasew'
+                jiraAssignIssue idOrKey: 'T2-27', site: '', userName: 'asha'
             }
         }
     }
