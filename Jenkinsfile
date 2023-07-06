@@ -7,6 +7,11 @@ pipeline {
                 echo 'github'
             }
         }
+        stage('Jira'){
+            steps {
+                 jiraAssignIssue accountId: '63d0ba64a05386069cdaa00d',site: 'JIRA_SITE', idOrKey: 'T2-27', userName: 'Sanath Venkatesh Timmanayakar'
+            }
+        }
         stage('Test') {
             steps {
                 echo 'this is a test phase'
@@ -16,8 +21,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'linking to jira instance'
-                jiraAssignIssue accountId: '63d0ba64a05386069cdaa00d',site: 'https://uat12.atlassian.net', idOrKey: 'T2-27', userName: 'Sanath Venkatesh Timmanayakar'
-
             }
         }
     }
