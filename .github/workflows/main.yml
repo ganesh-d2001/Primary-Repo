@@ -1,17 +1,20 @@
-name: Deployment
+name: Deploy to Production
 
 on:
   push:
     branches:
-        - main
+      - T2-55-rotation-animation
 
 jobs:
-  deployment:
+  deploy:
     runs-on: ubuntu-latest
-    environment: production
-    concurrency: production
+    
     steps:
-      - name: deploy
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Deploy to production
         run: |
-          echo 'Hello'
-          pwd
+          # Add your deployment commands here
+          echo "Deploying to production..."
+          echo "Deployment successful!"
