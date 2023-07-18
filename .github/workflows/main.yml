@@ -3,7 +3,7 @@ name: Deployment
 on:
   push:
     branches:
-        - main
+        - T2-63-bug-in-voice-patches
 
 jobs:
   deployment:
