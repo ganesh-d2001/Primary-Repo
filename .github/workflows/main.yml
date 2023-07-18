@@ -1,17 +1,37 @@
-name: Deployment
+name: Deploy to Production
 
 on:
   push:
     branches:
-        - T2-63-bug-in-voice-patches
+      - T2-63-bug-in-voice-patches
 
 jobs:
-  deployment:
+  deploy:
     runs-on: ubuntu-latest
-    environment: production
-    concurrency: production
+    
     steps:
-      - name: deploy
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to production
         run: |
-          echo 'Hello'
-          pwd
+          # Add your deployment commands here
+          # Example: deploying to a hosting service
+          # such as AWS, Heroku, or Netlify
+          # Replace the placeholders with your actual commands
+          echo "Deploying to production..."
+          # Your deployment command 1
+          # Your deployment command 2
+          # ...
+
