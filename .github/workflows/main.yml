@@ -1,0 +1,17 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      -T2-63-bug-in-voice-patches
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    concurrency: production
+    steps:
+      - name: deploy
+        run: |
+          echo 'Hello'
+          pwd
