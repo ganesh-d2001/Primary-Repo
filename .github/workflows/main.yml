@@ -26,12 +26,6 @@ jobs:
 
       - name: Deploy to production
         run: |
-          # Add your deployment commands here
-          # Example: deploying to a hosting service
-          # such as AWS, Heroku, or Netlify
-          # Replace the placeholders with your actual commands
           echo "Deploying to production..."
-          # Your deployment command 1
-          # Your deployment command 2
-          # ...
+  
 
